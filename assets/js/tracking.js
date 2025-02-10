@@ -14,7 +14,7 @@ function getCookie(name) {
     const eventTime = Math.floor(Date.now() / 1000); // Timestamp em segundos
 
     // Enviar dados para o backend
-    fetch('/server/enviar-evento', {
+    fetch('http://localhost:3000/enviar-evento', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

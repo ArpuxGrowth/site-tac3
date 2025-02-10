@@ -22,7 +22,7 @@ app.post('/enviar-evento', async (req, res) => {
     data: [{
       event_name: event_name || 'Lead', // Garante um nome de evento padrão
       event_time: event_time || Math.floor(Date.now() / 1000),
-      event_source_url: event_source_url || 'https://tac3vidros.com', // URL do seu site local
+      event_source_url: event_source_url || 'http://localhost:5500', // URL do seu site local
       action_source: action_source || 'website',
       user_data: {
         ...user_data,
@@ -51,5 +51,5 @@ app.post('/enviar-evento', async (req, res) => {
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em https://tac3vidros.com`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
