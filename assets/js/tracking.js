@@ -6,7 +6,7 @@ function getCookie(name) {
   }
 
   // Capturar clique no botão "Entre em contato"
-  document.querySelector('a.button-light[href^="http://wa.me"]').addEventListener('click', function (e) {
+  document.querySelector('a.button-light[href^="#form"]').addEventListener('click', function (e) {
     // Coletar dados automáticos
     const fbc = getCookie('_fbc'); // Cookie de ID de clique
     const fbp = getCookie('_fbp'); // Cookie de ID do navegador
